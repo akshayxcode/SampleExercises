@@ -1,0 +1,46 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.ehcache.org/v3"
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.10.xsd">
+
+    <cache alias="users">
+        <expiry>
+            <ttl unit="seconds">600</ttl>
+        </expiry>
+        <heap unit="entries">1000</heap>
+    </cache>
+
+    <cache alias="users_login">
+        <expiry>
+            <ttl unit="seconds">600</ttl>
+        </expiry>
+        <heap unit="entries">1000</heap>
+    </cache>
+
+
+    <cache alias="pets">
+        <expiry>
+            <ttl unit="seconds">1200</ttl>
+        </expiry>
+        <heap unit="entries">5000</heap>
+    </cache>
+    <cache alias="pets_by_status">
+        <expiry>
+            <ttl unit="seconds">1200</ttl>
+        </expiry>
+        <heap unit="entries">5000</heap>
+    </cache>
+    <cache alias="orders">
+        <expiry>
+            <ttl unit="seconds">1200</ttl>
+        </expiry>
+        <heap unit="entries">5000</heap>
+    </cache>
+
+    <cache alias="order_inventory">
+        <expiry>
+            <ttl unit="seconds">1200</ttl>
+        </expiry>
+        <heap unit="entries">5000</heap>
+    </cache>
+
+</config>

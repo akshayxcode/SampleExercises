@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "66274207-6a30-4c82-98c7-035414e3ba47",
+		"name": "Pet-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25701351"
+	},
+	"item": [
+		{
+			"name": "addPet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"Pinkyzzz\",  \n        \"category\": {\"id\": 2, \"name\": \"Goat\"},\n        \"photoUrls\": [\"url1\", \"url2\"],\n        \"tags\": [\"friendly\"],\n        \"status\": \"AVAILABLE\"\n\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePetByFormData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Booooty",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "SOLD",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatepet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 8,\n        \"name\": \"Tony\",  \n        \"category\": {\"id\": 2, \"name\": \"Dog\"},\n        \"photoUrls\": [\"url1\", \"url2\"],\n        \"tags\": [\"friendly\"],\n        \"status\": \"SOLD\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByStatus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pet/findByStatus?status=AVAILABLE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "AVAILABLE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pet/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pet/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pet",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
